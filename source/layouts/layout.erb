@@ -14,6 +14,9 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%= yield %>
+    <div class="outter-container">
+      <%= partial 'layouts/header' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

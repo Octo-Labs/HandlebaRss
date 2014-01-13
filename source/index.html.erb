@@ -1,0 +1,55 @@
+---
+title: HandlebaRss - RSS engine for static sites.
+---
+
+<div class="single-feed">
+  <h2>Embed a individual feeds</h2>
+  <div id="single-destination"></div>
+  <div id="single-destination-chomp"></div>
+</div>
+
+<div class="multiple-feeds">
+  <h2>Embed multiple feeds</h2>
+  <div id="multiple-destination"></div>
+</div>
+
+
+<!-- the handlebars template for the single feed -->
+<script id="single-feed-template" type="text/x-handlebars-template">
+<h2><a href="{{link}}" class="feed-title">{{title}}</a> by <span class="author">{{author}}</span></h2>
+  {{#each entries}}
+    <div class="entry">
+      <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+      <p>{{contentSnippet}}</p>
+    </div>
+  {{/each}}
+</script>
+
+
+<!-- the handlebars template for multiple feeds -->
+<script id="multiple-feed-template" type="text/x-handlebars-template">
+  {{#each entries}}
+  <div class="entry">
+    <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+    <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
+  </div>
+  {{/each}}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  rss = new HandlebaRss("http://www.octolabs.com/blogs/octoblog/feed.xml","#single-feed-template","#single-destination");
+  rss.init();
+
+  rss = new HandlebaRss("http://datachomp.com/atom.xml","#single-feed-template","#single-destination-chomp");
+  rss.init();
+
+  rss = new HandlebaRss([
+    "http://www.octolabs.com/blogs/octoblog/feed.xml",
+    "http://datachomp.com/atom.xml",
+    "http://geekindulgence.com/feed/",
+    "http://www.okcruby.org/atom.xml",
+    "http://okcjs.com/atom.xml",
+    "http://joekarl.github.io/feed.xml"
+  ],"#multiple-feed-template","#multiple-destination",5);
+  rss.init();
+</script>

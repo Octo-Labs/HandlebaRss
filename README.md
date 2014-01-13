@@ -48,13 +48,13 @@ representation of a feed object.
 
 ~~~json
 {
-  author : "Jeremy Green",
-  description : "",
-  feedUrl : "http://www.octolabs.com/blogs/octoblog/feed.xml",
-  link : "http://www.octolabs.com/blogs/octoblog",
-  title : "OctoBlog",
-  type : "atom10",
-  entries : [{...},{...}]
+  "author" : "Jeremy Green",
+  "description" : "",
+  "feedUrl" : "http://www.octolabs.com/blogs/octoblog/feed.xml",
+  "link" : "http://www.octolabs.com/blogs/octoblog",
+  "title" : "OctoBlog",
+  "type" : "atom10",
+  "entries" : [{...},{...}]
 }
 ~~~
 
@@ -93,7 +93,7 @@ entries from all of the feeds.
 
 ~~~json
 {
-  entries : [{...},{...},...]
+  "entries" : [{...},{...},...]
 }
 ~~~
 

@@ -102,3 +102,4 @@ HandlebaRss.prototype.coalesseFeeds = function(){
   return sortedEntries;
 }
 
+;

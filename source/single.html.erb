@@ -1,0 +1,77 @@
+---
+title : Single feeds - HandlebaRss
+---
+<h1>Single feeds</h1>
+<div class="demo-code">
+  <h2>This is the code</h2>
+  <p>First add a place holder div where you want the feed to be rendered.</p>
+  <% code("html") do %>
+<!-- the placeholder for the single feed -->
+<div id="single-destination"></div>
+<% end %>
+
+  <p>Then add a handlebars template to the page.</p>
+  <% code("handlebars") do %>
+<!-- the handlebars template for the single feed -->
+<script id="single-feed-template" type="text/x-handlebars-template">
+<h2>
+  <a href="{{link}}" class="feed-title">{{title}}</a> 
+  by 
+  <span class="author">{{author}}</span></h2>
+  {{#each entries}}
+    <div class="entry">
+      <h4>
+        <a href="{{link}}" class="entry-title">
+          {{title}}
+        </a>
+      </h4>
+      <p>{{contentSnippet}}</p>
+    </div>
+  {{/each}}
+</script>
+<% end %>
+
+  <p>And finally a little JavaScript to kick things off.</p>
+  <% code("javascript") do %>
+var feedUrl = "http://www.octolabs.com/blogs/octoblog/feed.xml";
+var template = "#single-feed-template";
+var destination = "#single-destination";
+rss = new HandlebaRss(feedUrl,template,destination);
+rss.init();
+<% end %>
+
+<h3>Additional Info</h3>
+<p>For single feeds the context of the handlebars template is a JSON representation of a feed object.</p>
+<% code('json') do %>
+{
+  "author" : "Jeremy Green",
+  "description" : "",
+  "feedUrl" : "http://www.octolabs.com/blogs/octoblog/feed.xml",
+  "link" : "http://www.octolabs.com/blogs/octoblog",
+  "title" : "OctoBlog",
+  "type" : "atom10",
+  "entries" : [{...},{...}]
+}
+<% end %>
+<p><%= link_to "Learn how to embed multiple feeds.", "multiple.html" %></p>
+</div>
+<div class="demo-view">
+  <h2>This is the output</h2>
+  <div id="single-destination"></div>
+</div>
+
+<!-- the handlebars template for the single feed -->
+<script id="single-feed-template" type="text/x-handlebars-template">
+  <h2><a href="{{link}}" class="feed-title">{{title}}</a> by <span class="author">{{author}}</span></h2>
+  {{#each entries}}
+    <div class="entry">
+      <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+      <p>{{contentSnippet}}</p>
+    </div>
+  {{/each}}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  rss = new HandlebaRss("http://www.octolabs.com/blogs/octoblog/feed.xml","#single-feed-template","#single-destination");
+  rss.init();
+</script>

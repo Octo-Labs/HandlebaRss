@@ -2,16 +2,18 @@
 
 @import 'normalize';
 
-body {
-  background: #d4d4d4 url("../images/background.png");
-  font-family: sans-serif; 
-}
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
 
 @import "bourbon";
 @import "grid-settings";
 @import "neat";
 
 @import "mixins";
+
+body {
+  background: #d4d4d4 url("../images/background.png");
+  font-family: sans-serif; 
+}
 
 
 .outter-container{
@@ -28,6 +30,18 @@ body {
   @include omega;
   @include collapse;
 }
+
+.demo-code{
+  @include span-columns(8);
+  @include collapse;
+}
+
+.demo-view{
+  @include span-columns(4);
+  @include omega;
+  @include collapse;
+}
+
 
 .entry{
   border-bottom:1px solid #888;
@@ -46,3 +60,6 @@ body {
 .entry-title{
   color:#007;
 }
+
+
+

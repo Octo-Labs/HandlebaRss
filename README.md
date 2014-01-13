@@ -86,10 +86,13 @@ number of articles per feed.
   rss.init();
 </script>
 ~~~
-
+gv
 For multiple feeds the context of the handlebars template is a JSON
 object that contains an `entries` array of the combined and sorted
-entries from all of the feeds.  
+entries from all of the feeds. Each `entry` has a `feed` property that
+contains the data from the top level feed that the entry belongs to
+(`author`,`description`,`feedUrl`, etc...).  In the template you can
+access these with something like `{{feed.author}}`.
 
 ~~~json
 {

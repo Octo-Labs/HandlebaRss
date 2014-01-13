@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  
+    <title>JS RSS Viewer</title>
+    
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/handlebars-v1.3.0.js"></script>
+
+    <!-- include source files here... -->
+    <script type="text/javascript" src="src/HandlebaRss.js"></script>
+
+  </head>
+  <body>
+    
+    <div id="destination"></div>
+
+    <script id="feed-template" type="text/x-handlebars-template">
+      <h1>{{title}}</h1>
+      {{#each entries}}
+        <h2><a href="{{link}}">{{title}}</a></h2>
+        <p>{{contentSnippet}}</p>
+      {{/each}}
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+      rss = new HandlebaRss("http://www.octolabs.com/blogs/octoblog/feed.xml","#feed-template","#destination");
+      rss.init();
+    </script>
+  </body>
+</html>

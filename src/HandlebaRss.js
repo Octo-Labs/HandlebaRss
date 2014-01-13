@@ -28,9 +28,10 @@ HandlebaRss.prototype.addFeedData = function(data){
 }
 
 HandlebaRss.prototype.retrieveUrl = function(url,callback){
+  var protocol = document.location.protocol;
+  if(protocol == 'file:'){ protocol = 'http:'}
   $.ajax({
-    url: 'http:' + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
-    //url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(this.feedUrl),
+    url: protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
     dataType: 'json',
     success: callback
   });

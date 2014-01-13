@@ -29,6 +29,7 @@
 <body>
   
   <div id="destination" style="display:none;"></div>
+  <div id="multiple-destination" style="display:none;"></div>
 
   <script id="feed-template" type="text/x-handlebars-template">
     <h1>{{title}}</h1>
@@ -36,5 +37,14 @@
       <h2>{{title}}</h2>
     {{/each}}
   </script>
+
+  <script id="multi-feed-template" type="text/x-handlebars-template">
+    {{#each entries}}
+      <h2><a href="{{link}}">{{title}}</a> - {{publishedDate}}</h2>
+      <p>{{contentSnippet}}</p>
+      <h5>From {{feed.title}}</h5>
+    {{/each}}
+  </script>
+
 </body>
 </html>

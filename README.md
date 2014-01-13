@@ -8,6 +8,10 @@ HandlebaRss depends on `jquery` and `handlebars`.
 
 ## Getting started
 
+### Installation
+
+First include the dependncies on your page.
+
 ~~~html
 <!-- include dependencies -->
 <script type="text/javascript" src="jquery.js"></script>
@@ -15,7 +19,11 @@ HandlebaRss depends on `jquery` and `handlebars`.
 
 <!-- include HandlebaRss -->
 <script type="text/javascript" src="src/HandlebaRss.js"></script>
+~~~
 
+### Single feeds
+
+~~~html
 <!-- the place where the feed should be rendered -->
 <div id="destination"></div>
 
@@ -34,6 +42,61 @@ HandlebaRss depends on `jquery` and `handlebars`.
   rss.init();
 </script>
 ~~~
+
+For single feeds the context of the handlebars template is a JSON
+representation of a feed object.
+
+~~~json
+{
+  author : "Jeremy Green",
+  description : "",
+  feedUrl : "http://www.octolabs.com/blogs/octoblog/feed.xml",
+  link : "http://www.octolabs.com/blogs/octoblog",
+  title : "OctoBlog",
+  type : "atom10",
+  entries : [{...},{...}]
+}
+~~~
+
+### Multiple feeds
+
+For multiple feeds, just pass an array of URLs as the first argument.
+You can optionally pass an integer as the last argument to limit the
+number of articles per feed.
+
+~~~html
+<!-- the place where the feed should be rendered -->
+<div id="destination"></div>
+
+<!-- the handlebars template for the feed -->
+<script id="feed-template" type="text/x-handlebars-template">
+  {{#each entries}}
+    <h2><a href="{{link}}">{{title}}</a></h2>
+    <p>From {{feed.title}}</p>
+  {{/each}}
+</script>
+
+<!-- now create a HandlebaRss instance and call init() -->
+<script type="text/javascript" charset="utf-8">
+  rss = new HandlebaRss([
+    "http://www.octolabs.com/blogs/octoblog/feed.xml",
+    "http://datachomp.com/atom.xml",
+    "http://geekindulgence.com/feed/"
+  ],"#feed-template","#destination",5);
+  rss.init();
+</script>
+~~~
+
+For multiple feeds the context of the handlebars template is a JSON
+object that contains an `entries` array of the combined and sorted
+entries from all of the feeds.  
+
+~~~json
+{
+  entries : [{...},{...},...]
+}
+~~~
+
 
 ## Running the tests
 

@@ -347,10 +347,281 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 5, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
-body {
-  background: #d4d4d4 url("../images/background.png");
-  font-family: sans-serif; }
+/* line 5, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight table td {
+  padding: 5px; }
+
+/* line 6, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight table pre {
+  margin: 0; }
+
+/* line 7, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .cm {
+  color: #999988;
+  font-style: italic; }
+
+/* line 11, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .cp {
+  color: #999999;
+  font-weight: bold; }
+
+/* line 15, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* line 19, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* line 24, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .c, .highlight .cd {
+  color: #999988;
+  font-style: italic; }
+
+/* line 28, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* line 32, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* line 36, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .ge {
+  color: #000000;
+  font-style: italic; }
+
+/* line 40, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gr {
+  color: #aa0000; }
+
+/* line 43, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gh {
+  color: #999999; }
+
+/* line 46, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd; }
+
+/* line 50, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .go {
+  color: #888888; }
+
+/* line 53, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gp {
+  color: #555555; }
+
+/* line 56, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gs {
+  font-weight: bold; }
+
+/* line 59, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* line 62, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .gt {
+  color: #aa0000; }
+
+/* line 65, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kc {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 69, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kd {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 73, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kn {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 77, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kp {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 81, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kr {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 85, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .kt {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 89, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 93, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .mf {
+  color: #009999; }
+
+/* line 96, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .mh {
+  color: #009999; }
+
+/* line 99, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .il {
+  color: #009999; }
+
+/* line 102, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .mi {
+  color: #009999; }
+
+/* line 105, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .mo {
+  color: #009999; }
+
+/* line 108, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999; }
+
+/* line 111, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sb {
+  color: #d14; }
+
+/* line 114, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sc {
+  color: #d14; }
+
+/* line 117, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sd {
+  color: #d14; }
+
+/* line 120, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .s2 {
+  color: #d14; }
+
+/* line 123, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .se {
+  color: #d14; }
+
+/* line 126, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sh {
+  color: #d14; }
+
+/* line 129, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .si {
+  color: #d14; }
+
+/* line 132, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sx {
+  color: #d14; }
+
+/* line 135, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .sr {
+  color: #009926; }
+
+/* line 138, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .s1 {
+  color: #d14; }
+
+/* line 141, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .ss {
+  color: #990073; }
+
+/* line 144, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .s {
+  color: #d14; }
+
+/* line 147, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .na {
+  color: #008080; }
+
+/* line 150, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .bp {
+  color: #999999; }
+
+/* line 153, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nb {
+  color: #0086B3; }
+
+/* line 156, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nc {
+  color: #445588;
+  font-weight: bold; }
+
+/* line 160, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .no {
+  color: #008080; }
+
+/* line 163, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold; }
+
+/* line 167, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .ni {
+  color: #800080; }
+
+/* line 170, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .ne {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 174, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nf {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 178, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nl {
+  color: #990000;
+  font-weight: bold; }
+
+/* line 182, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nn {
+  color: #555555; }
+
+/* line 185, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nt {
+  color: #000080; }
+
+/* line 188, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .vc {
+  color: #008080; }
+
+/* line 191, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .vg {
+  color: #008080; }
+
+/* line 194, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .vi {
+  color: #008080; }
+
+/* line 197, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .nv {
+  color: #008080; }
+
+/* line 200, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .ow {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 204, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .o {
+  color: #000000;
+  font-weight: bold; }
+
+/* line 208, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight .w {
+  color: #bbbbbb; }
+
+/* line 211, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.highlight {
+  background-color: #f8f8f8; }
 
 /*
 $column: 90px;
@@ -403,7 +674,12 @@ body:before {
       background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #eeeeee 26.85574%, #eeeeee 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #eeeeee 53.71149%, #eeeeee 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #eeeeee 80.56723%, #eeeeee 100%, rgba(0, 0, 0, 0) 100%);
       background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #eeeeee 0, #eeeeee 19.43277%, rgba(0, 0, 0, 0) 19.43277%, rgba(0, 0, 0, 0) 26.85574%, #eeeeee 26.85574%, #eeeeee 46.28851%, rgba(0, 0, 0, 0) 46.28851%, rgba(0, 0, 0, 0) 53.71149%, #eeeeee 53.71149%, #eeeeee 73.14426%, rgba(0, 0, 0, 0) 73.14426%, rgba(0, 0, 0, 0) 80.56723%, #eeeeee 80.56723%, #eeeeee 100%, rgba(0, 0, 0, 0) 100%); } }
 
-/* line 17, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 220, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+body {
+  background: #d4d4d4 url("../images/background.png");
+  font-family: sans-serif; }
+
+/* line 226, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .outter-container {
   *zoom: 1;
   max-width: 68em;
@@ -417,7 +693,7 @@ body:before {
   .outter-container:after {
     clear: both; }
 
-/* line 21, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 230, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .single-feed {
   float: left;
   display: block;
@@ -427,7 +703,7 @@ body:before {
   .single-feed:last-child {
     margin-right: 0; }
   @media screen and (max-width: 480px) {
-    /* line 21, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+    /* line 230, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
     .single-feed {
       float: left;
       display: block;
@@ -437,7 +713,7 @@ body:before {
       .single-feed:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 768px) {
-    /* line 21, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+    /* line 230, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
     .single-feed {
       float: left;
       display: block;
@@ -447,7 +723,7 @@ body:before {
       .single-feed:last-child {
         margin-right: 0; } }
 
-/* line 26, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 235, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .multiple-feeds {
   float: left;
   display: block;
@@ -458,7 +734,7 @@ body:before {
   .multiple-feeds:last-child {
     margin-right: 0; }
   @media screen and (max-width: 480px) {
-    /* line 26, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+    /* line 235, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
     .multiple-feeds {
       float: left;
       display: block;
@@ -468,7 +744,7 @@ body:before {
       .multiple-feeds:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 768px) {
-    /* line 26, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+    /* line 235, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
     .multiple-feeds {
       float: left;
       display: block;
@@ -478,20 +754,81 @@ body:before {
       .multiple-feeds:last-child {
         margin-right: 0; } }
 
-/* line 32, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 241, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.demo-code {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .demo-code:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    /* line 241, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+    .demo-code {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .demo-code:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 768px) {
+    /* line 241, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+    .demo-code {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 100%; }
+      /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .demo-code:last-child {
+        margin-right: 0; } }
+
+/* line 246, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+.demo-view {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  margin-right: 0; }
+  /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .demo-view:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    /* line 246, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+    .demo-view {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 100%; }
+      /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .demo-view:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 768px) {
+    /* line 246, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+    .demo-view {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 100%; }
+      /* line 40, /Users/jgreen/.rvm/gems/ruby-2.1.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .demo-view:last-child {
+        margin-right: 0; } }
+
+/* line 253, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .entry {
   border-bottom: 1px solid #888; }
 
-/* line 36, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 257, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .feed-title {
   font-weight: bold;
   color: #700; }
 
-/* line 41, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 262, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .author {
   font-style: italic;
   color: #070; }
 
-/* line 46, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss */
+/* line 267, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 .entry-title {
   color: #007; }

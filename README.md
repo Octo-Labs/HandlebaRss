@@ -23,7 +23,7 @@ First include the dependncies on your page.
 
 ### Single feeds
 
-~~~
+~~~html
 <!-- the place where the feed should be rendered -->
 <div id="destination"></div>
 

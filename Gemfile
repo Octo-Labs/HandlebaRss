@@ -9,7 +9,7 @@ gem "middleman-syntax"
 gem "middleman-bourbon"
 gem "middleman-neat"
 
-gem "middleman-gh-pages"
+gem "middleman-gh-pages", :path => "../middleman-gh-pages"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"

@@ -2,6 +2,8 @@
 
 A small RSS viewer for displaying remote feeds on static sites.
 
+[http://octo-labs.github.io/HandlebaRss/](http://octo-labs.github.io/HandlebaRss/)
+
 ## Requirements
 
 HandlebaRss depends on `jquery` and `handlebars`.

@@ -42,6 +42,8 @@
     &lt;p&gt;
       From &lt;span class="feed-title"&gt;</span><span class="k">{{</span><span class="nv">feed</span><span class="p">.</span><span class="nv">title</span><span class="k">}}</span><span class="err">&lt;/span&gt; 
       by &lt;span class="author"&gt;</span><span class="k">{{</span><span class="nv">feed</span><span class="p">.</span><span class="nv">author</span><span class="k">}}</span><span class="err">&lt;/span&gt;
+      &lt;br/&gt;
+      </span><span class="k">{{</span><span class="nv">publishedDate</span><span class="k">}}</span><span class="err">
     &lt;/p&gt;
   &lt;/div&gt;
   </span><span class="k">{{/</span><span class="nn">each</span><span class="k">}}</span>
@@ -52,10 +54,12 @@
 <span class="nx">rss</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HandlebaRss</span><span class="p">([</span>
   <span class="s2">"http://www.octolabs.com/blogs/octoblog/feed.xml"</span><span class="p">,</span>
   <span class="s2">"http://datachomp.com/atom.xml"</span><span class="p">,</span>
-  <span class="s2">"http://geekindulgence.com/feed/"</span><span class="p">,</span>
+  <span class="s2">"http://geekindulgence.com/rss/"</span><span class="p">,</span>
   <span class="s2">"http://www.okcruby.org/atom.xml"</span><span class="p">,</span>
   <span class="s2">"http://okcjs.com/atom.xml"</span><span class="p">,</span>
-  <span class="s2">"http://joekarl.github.io/feed.xml"</span>
+  <span class="s2">"http://joekarl.github.io/feed.xml"</span><span class="p">,</span>
+  <span class="s2">"http://vancelucas.com/feed.xml"</span><span class="p">,</span>
+  <span class="s2">"http://campbeja.github.io/feed.xml"</span>
 <span class="p">],</span><span class="s2">"#multiple-feed-template"</span><span class="p">,</span><span class="s2">"#multiple-destination"</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
 <span class="nx">rss</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
 </pre>
@@ -86,7 +90,11 @@
   {{#each entries}}
   <div class="entry">
     <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
-    <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
+    <p>
+      From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span>
+      <br/>
+      {{publishedDate}}
+    </p>
   </div>
   {{/each}}
   </div>
@@ -96,10 +104,12 @@
   rss = new HandlebaRss([
     "http://www.octolabs.com/blogs/octoblog/feed.xml",
     "http://datachomp.com/atom.xml",
-    "http://geekindulgence.com/feed/",
+    "http://geekindulgence.com/rss/",
     "http://www.okcruby.org/atom.xml",
     "http://okcjs.com/atom.xml",
-    "http://joekarl.github.io/feed.xml"
+    "http://joekarl.github.io/feed.xml",
+    "http://vancelucas.com/feed.xml",
+    "http://campbeja.github.io/feed.xml"
   ],"#multiple-feed-template","#multiple-destination",5);
   rss.init();
 </script>

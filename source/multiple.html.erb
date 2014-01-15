@@ -20,6 +20,8 @@ title : Multiple feeds - HandlebaRss
     <p>
       From <span class="feed-title">{{feed.title}}</span> 
       by <span class="author">{{feed.author}}</span>
+      <br/>
+      {{publishedDate}}
     </p>
   </div>
   {{/each}}
@@ -70,7 +72,11 @@ rss.init();
   {{#each entries}}
   <div class="entry">
     <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
-    <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
+    <p>
+      From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span>
+      <br/>
+      {{publishedDate}}
+    </p>
   </div>
   {{/each}}
   </div>

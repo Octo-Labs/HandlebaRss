@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title>The Middleman</title>
+    <title>Multiple feeds - HandlebaRss</title>
     
     <link href="/HandlebaRss/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/HandlebaRss/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" />
@@ -16,11 +16,111 @@
   
   <body class="multiple">
     <div class="outter-container">
-      <h1>HandlebaRss</h1>
-<h3>RSS engine for static sites</h3>
-<hr />
+      <div class="header">
+  <h1><a href="/HandlebaRss/">HandlebaRss</a></h1>
+  <h3>RSS engine for static sites</h3>
+  <ul class="">
+    <li><a href="/HandlebaRss/single.html">Single feeds</a></li>
+    <li><a href="/HandlebaRss/multiple.html">Multiple feeds</a></li>
+  </ul>
+</div>
 
-      
+      <h1>Multiple feeds</h1>
+<div class="demo-code">
+  <h2>This is the code</h2>
+  <p>First add a place holder div where you want the feed to be rendered.</p>
+  <pre class="highlight html">
+<span class="c">&lt;!-- the placeholder for the single feed --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"multiple-destination"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre>
+  <p>Then add a handlebars template to the page.</p>
+  <pre class="highlight handlebars">
+<span class="c">&lt;!-- the handlebars template for multiple feeds --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">id=</span><span class="s">"multiple-feed-template"</span> <span class="na">type=</span><span class="s">"text/x-handlebars-template"</span><span class="nt">&gt;</span><span class="err">
+  </span><span class="k">{{#</span><span class="nn">each</span> <span class="nv">entries</span><span class="k">}}</span><span class="err">
+  &lt;div class="entry"&gt;
+    &lt;h4&gt;&lt;a href="</span><span class="k">{{</span><span class="nv">link</span><span class="k">}}</span><span class="err">" class="entry-title"&gt;</span><span class="k">{{</span><span class="nv">title</span><span class="k">}}</span><span class="err">&lt;/a&gt;&lt;/h4&gt;
+    &lt;p&gt;
+      From &lt;span class="feed-title"&gt;</span><span class="k">{{</span><span class="nv">feed</span><span class="p">.</span><span class="nv">title</span><span class="k">}}</span><span class="err">&lt;/span&gt; 
+      by &lt;span class="author"&gt;</span><span class="k">{{</span><span class="nv">feed</span><span class="p">.</span><span class="nv">author</span><span class="k">}}</span><span class="err">&lt;/span&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  </span><span class="k">{{/</span><span class="nn">each</span><span class="k">}}</span>
+<span class="nt">&lt;/script&gt;</span>
+</pre>
+  <p>And finally a little JavaScript to kick things off.</p>
+  <pre class="highlight javascript">
+<span class="nx">rss</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HandlebaRss</span><span class="p">([</span>
+  <span class="s2">"http://www.octolabs.com/blogs/octoblog/feed.xml"</span><span class="p">,</span>
+  <span class="s2">"http://datachomp.com/atom.xml"</span><span class="p">,</span>
+  <span class="s2">"http://geekindulgence.com/feed/"</span><span class="p">,</span>
+  <span class="s2">"http://www.okcruby.org/atom.xml"</span><span class="p">,</span>
+  <span class="s2">"http://okcjs.com/atom.xml"</span><span class="p">,</span>
+  <span class="s2">"http://joekarl.github.io/feed.xml"</span>
+<span class="p">],</span><span class="s2">"#multiple-feed-template"</span><span class="p">,</span><span class="s2">"#multiple-destination"</span><span class="p">,</span><span class="mi">5</span><span class="p">);</span>
+<span class="nx">rss</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+</pre>
+
+
+<h3>Additional Info</h3>
+<p>
+  For multiple feeds the context of the handlebars template is a 
+  JSON object that contains an entries array of the combined and 
+  sorted entries from all of the feeds. Each entry has a feed property 
+  that contains the data from the top level feed that the entry belongs 
+  to (author,description,feedUrl, etc...). In the template you can access 
+  these with something like {{feed.author}}.
+</p>
+<pre class="highlight json"><span class="p">{</span><span class="w">
+  </span><span class="s2">"entries"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="err">...}</span><span class="p">,{</span><span class="err">...}</span><span class="p">,</span><span class="err">...</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre><p><a href="/HandlebaRss/multiple.html">Learn how to embed multiple feeds.</a></p>
+</div>
+<div class="demo-view">
+  <h2>This is the output</h2>
+  <div id="multiple-destination"></div>
+</div>
+
+<!-- the handlebars template for multiple feeds -->
+<script id="multiple-feed-template" type="text/x-handlebars-template">
+  {{#each entries}}
+  <div class="entry">
+    <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+    <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
+  </div>
+  {{/each}}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  rss = new HandlebaRss([
+    "http://www.octolabs.com/blogs/octoblog/feed.xml",
+    "http://datachomp.com/atom.xml",
+    "http://geekindulgence.com/feed/",
+    "http://www.okcruby.org/atom.xml",
+    "http://okcjs.com/atom.xml",
+    "http://joekarl.github.io/feed.xml"
+  ],"#multiple-feed-template","#multiple-destination",5);
+  rss.init();
+</script>
+
+
+      <footer class="footer">
+  <a class="octologo" href="http://www.octolabs.com/"><img src="/HandlebaRss/images/octolabs.png" /></a>
+  <div class='text'>
+    <p>This site is a demo for <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a>.</p>
+    <p>
+      You can find souce code for 
+      <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a> and 
+      <a href="https://github.com/Octo-Labs/HandlebaRss/tree/gh-pages">this site</a> on 
+      <a href="http://github.com/">Github</a>.
+    </p>
+    <p>
+      HandlebaRss is a production of 
+      <a href="http://www.octolabs.com/">OctoLabs</a>.
+    </p>
+  </div>
+</footer>
+
     </div>
   </body>
 </html>

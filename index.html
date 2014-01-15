@@ -16,24 +16,35 @@
   
   <body class="index">
     <div class="outter-container">
-      <h1>HandlebaRss</h1>
-<h3>RSS engine for static sites</h3>
-<hr />
+      <div class="header">
+  <h1><a href="/HandlebaRss/">HandlebaRss</a></h1>
+  <h3>RSS engine for static sites</h3>
+  <ul class="">
+    <li><a href="/HandlebaRss/single.html">Single feeds</a></li>
+    <li><a href="/HandlebaRss/multiple.html">Multiple feeds</a></li>
+  </ul>
+</div>
 
       <div class="single-feed">
-  <h2><a href="/HandlebaRss/single.html">Embed individual feeds</a></h2>
+  <h2>Individual feed demos</h2>
+  <p><a href="/HandlebaRss/single.html">Learn how to embed individual feeds</a></p>
   <div id="single-destination"></div>
   <div id="single-destination-chomp"></div>
 </div>
 
 <div class="multiple-feeds">
-  <h2><a href="/HandlebaRss/multiple.html">Embed multiple feeds</a></h2>
-  <div id="multiple-destination"></div>
+  <h2>Multiple feeds demo</h2>
+  <p><a href="/HandlebaRss/multiple.html">Learn how to embed multiple feeds</a></p>
+  <div class="feed">
+    <h2>Posts from OKC Area Developers</h2>
+    <div id="multiple-destination"></div>
+  </div>
 </div>
 
 
 <!-- the handlebars template for the single feed -->
 <script id="single-feed-template" type="text/x-handlebars-template">
+  <div class="feed">
   <h2><a href="{{link}}" class="feed-title">{{title}}</a> by <span class="author">{{author}}</span></h2>
   {{#each entries}}
     <div class="entry">
@@ -41,6 +52,7 @@
       <p>{{contentSnippet}}</p>
     </div>
   {{/each}}
+  </div>
 </script>
 
 
@@ -71,6 +83,23 @@
   ],"#multiple-feed-template","#multiple-destination",5);
   rss.init();
 </script>
+
+      <footer class="footer">
+  <a class="octologo" href="http://www.octolabs.com/"><img src="/HandlebaRss/images/octolabs.png" /></a>
+  <div class='text'>
+    <p>This site is a demo for <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a>.</p>
+    <p>
+      You can find souce code for 
+      <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a> and 
+      <a href="https://github.com/Octo-Labs/HandlebaRss/tree/gh-pages">this site</a> on 
+      <a href="http://github.com/">Github</a>.
+    </p>
+    <p>
+      HandlebaRss is a production of 
+      <a href="http://www.octolabs.com/">OctoLabs</a>.
+    </p>
+  </div>
+</footer>
 
     </div>
   </body>

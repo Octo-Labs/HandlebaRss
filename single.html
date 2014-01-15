@@ -16,9 +16,14 @@
   
   <body class="single">
     <div class="outter-container">
-      <h1>HandlebaRss</h1>
-<h3>RSS engine for static sites</h3>
-<hr />
+      <div class="header">
+  <h1><a href="/HandlebaRss/">HandlebaRss</a></h1>
+  <h3>RSS engine for static sites</h3>
+  <ul class="">
+    <li><a href="/HandlebaRss/single.html">Single feeds</a></li>
+    <li><a href="/HandlebaRss/multiple.html">Multiple feeds</a></li>
+  </ul>
+</div>
 
       <h1>Single feeds</h1>
 <div class="demo-code">
@@ -91,6 +96,23 @@
   rss = new HandlebaRss("http://www.octolabs.com/blogs/octoblog/feed.xml","#single-feed-template","#single-destination");
   rss.init();
 </script>
+
+      <footer class="footer">
+  <a class="octologo" href="http://www.octolabs.com/"><img src="/HandlebaRss/images/octolabs.png" /></a>
+  <div class='text'>
+    <p>This site is a demo for <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a>.</p>
+    <p>
+      You can find souce code for 
+      <a href="https://github.com/Octo-Labs/HandlebaRss">HandlebaRss</a> and 
+      <a href="https://github.com/Octo-Labs/HandlebaRss/tree/gh-pages">this site</a> on 
+      <a href="http://github.com/">Github</a>.
+    </p>
+    <p>
+      HandlebaRss is a production of 
+      <a href="http://www.octolabs.com/">OctoLabs</a>.
+    </p>
+  </div>
+</footer>
 
     </div>
   </body>

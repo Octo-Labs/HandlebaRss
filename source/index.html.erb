@@ -3,19 +3,25 @@ title: HandlebaRss - RSS engine for static sites.
 ---
 
 <div class="single-feed">
-  <h2><%= link_to "Embed individual feeds", "single.html" %></h2>
+  <h2>Individual feed demos</h2>
+  <p><%= link_to "Learn how to embed individual feeds", "single.html" %></p>
   <div id="single-destination"></div>
   <div id="single-destination-chomp"></div>
 </div>
 
 <div class="multiple-feeds">
-  <h2><%= link_to "Embed multiple feeds", "multiple.html" %></h2>
-  <div id="multiple-destination"></div>
+  <h2>Multiple feeds demo</h2>
+  <p><%= link_to "Learn how to embed multiple feeds", "multiple.html" %></p>
+  <div class="feed">
+    <h2>Posts from OKC Area Developers</h2>
+    <div id="multiple-destination"></div>
+  </div>
 </div>
 
 
 <!-- the handlebars template for the single feed -->
 <script id="single-feed-template" type="text/x-handlebars-template">
+  <div class="feed">
   <h2><a href="{{link}}" class="feed-title">{{title}}</a> by <span class="author">{{author}}</span></h2>
   {{#each entries}}
     <div class="entry">
@@ -23,6 +29,7 @@ title: HandlebaRss - RSS engine for static sites.
       <p>{{contentSnippet}}</p>
     </div>
   {{/each}}
+  </div>
 </script>
 
 

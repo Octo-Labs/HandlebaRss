@@ -1,0 +1,86 @@
+---
+title : Multiple feeds - HandlebaRss
+---
+<h1>Multiple feeds</h1>
+<div class="demo-code">
+  <h2>This is the code</h2>
+  <p>First add a place holder div where you want the feed to be rendered.</p>
+  <% code("html") do %>
+<!-- the placeholder for the single feed -->
+<div id="multiple-destination"></div>
+<% end %>
+
+  <p>Then add a handlebars template to the page.</p>
+  <% code("handlebars") do %>
+<!-- the handlebars template for multiple feeds -->
+<script id="multiple-feed-template" type="text/x-handlebars-template">
+  {{#each entries}}
+  <div class="entry">
+    <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+    <p>
+      From <span class="feed-title">{{feed.title}}</span> 
+      by <span class="author">{{feed.author}}</span>
+    </p>
+  </div>
+  {{/each}}
+</script>
+<% end %>
+
+  <p>And finally a little JavaScript to kick things off.</p>
+  <% code("javascript") do %>
+rss = new HandlebaRss([
+  "http://www.octolabs.com/blogs/octoblog/feed.xml",
+  "http://datachomp.com/atom.xml",
+  "http://geekindulgence.com/feed/",
+  "http://www.okcruby.org/atom.xml",
+  "http://okcjs.com/atom.xml",
+  "http://joekarl.github.io/feed.xml"
+],"#multiple-feed-template","#multiple-destination",5);
+rss.init();
+<% end %>
+
+
+
+<h3>Additional Info</h3>
+<p>
+  For multiple feeds the context of the handlebars template is a 
+  JSON object that contains an entries array of the combined and 
+  sorted entries from all of the feeds. Each entry has a feed property 
+  that contains the data from the top level feed that the entry belongs 
+  to (author,description,feedUrl, etc...). In the template you can access 
+  these with something like {{feed.author}}.
+</p>
+<% code('json') do %>
+{
+  "entries" : [{...},{...},...]
+}
+<% end %>
+<p><%= link_to "Learn how to embed multiple feeds.", "multiple.html" %></p>
+</div>
+<div class="demo-view">
+  <h2>This is the output</h2>
+  <div id="multiple-destination"></div>
+</div>
+
+<!-- the handlebars template for multiple feeds -->
+<script id="multiple-feed-template" type="text/x-handlebars-template">
+  {{#each entries}}
+  <div class="entry">
+    <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
+    <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
+  </div>
+  {{/each}}
+</script>
+
+<script type="text/javascript" charset="utf-8">
+  rss = new HandlebaRss([
+    "http://www.octolabs.com/blogs/octoblog/feed.xml",
+    "http://datachomp.com/atom.xml",
+    "http://geekindulgence.com/feed/",
+    "http://www.okcruby.org/atom.xml",
+    "http://okcjs.com/atom.xml",
+    "http://joekarl.github.io/feed.xml"
+  ],"#multiple-feed-template","#multiple-destination",5);
+  rss.init();
+</script>
+

@@ -18,6 +18,27 @@ body {
 
 .outter-container{
   @include outer-container;
+  @include clearfix;
+}
+
+.header{
+  border-bottom:1px solid #888;
+  @include clearfix;
+
+  h3{ 
+    float:left;
+    margin:0px;
+  }
+  ul{
+    float:right;
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    li{
+      float:left;
+      margin:5px;
+    }
+  }
 }
 
 .single-feed{
@@ -45,6 +66,17 @@ body {
 
 .entry{
   border-bottom:1px solid #888;
+  &:last-child{
+    border-bottom:0px;
+  }
+}
+
+.feed{
+  border:1px solid #999;
+  border-radius:6px;
+  background:#ccc;
+  padding:0 10px;
+  margin-bottom:1em;
 }
 
 .feed-title{
@@ -61,5 +93,35 @@ body {
   color:#007;
 }
 
+footer{
 
+  clear:both;
+  margin-top:1.5em;
+  padding:10px;
+  border-top:1px solid #aaa;
+
+  zoom: 1;
+
+
+  @include opacity(0.3);
+  //@include transition (opacity 0.4s ease-in 0s);
+
+  &:hover{
+    @include opacity(0.9);
+  }
+
+  .text{
+    padding-top:0.4em;
+    padding-left:75px;
+    p{
+      margin-bottom:0.15em;
+      margin-top:0px;
+    }
+  }
+
+  .octologo{
+    float:left;
+  }
+  
+}
 

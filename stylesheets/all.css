@@ -840,6 +840,12 @@ body {
   color: #007; }
 
 /* line 303, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+pre.highlight {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #888; }
+
+/* line 310, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
 footer {
   clear: both;
   margin-top: 1.5em;
@@ -850,20 +856,20 @@ footer {
   -moz-opacity: 0.3;
   -webkit-opacity: 0.3;
   filter: alpha(opacity=30); }
-  /* line 316, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+  /* line 323, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
   footer:hover {
     opacity: 0.9;
     -moz-opacity: 0.9;
     -webkit-opacity: 0.9;
     filter: alpha(opacity=90); }
-  /* line 320, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+  /* line 327, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
   footer .text {
     padding-top: 0.4em;
     padding-left: 75px; }
-    /* line 323, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+    /* line 330, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
     footer .text p {
       margin-bottom: 0.15em;
       margin-top: 0px; }
-  /* line 329, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
+  /* line 336, /Users/jgreen/Desktop/rails_projects/HandlebaRss/source/stylesheets/all.css.scss.erb */
   footer .octologo {
     float: left; }

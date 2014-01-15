@@ -74,7 +74,7 @@
 <pre class="highlight json"><span class="p">{</span><span class="w">
   </span><span class="s2">"entries"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="err">...}</span><span class="p">,{</span><span class="err">...}</span><span class="p">,</span><span class="err">...</span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></pre><p><a href="/HandlebaRss/multiple.html">Learn how to embed multiple feeds.</a></p>
+</span></pre><p><a href="/HandlebaRss/single.html">Learn how to embed individual feeds.</a></p>
 </div>
 <div class="demo-view">
   <h2>This is the output</h2>
@@ -83,12 +83,14 @@
 
 <!-- the handlebars template for multiple feeds -->
 <script id="multiple-feed-template" type="text/x-handlebars-template">
+  <div class="feed">
   {{#each entries}}
   <div class="entry">
     <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
     <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
   </div>
   {{/each}}
+  </div>
 </script>
 
 <script type="text/javascript" charset="utf-8">

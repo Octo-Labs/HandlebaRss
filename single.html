@@ -83,6 +83,7 @@
 
 <!-- the handlebars template for the single feed -->
 <script id="single-feed-template" type="text/x-handlebars-template">
+  <div class="feed">
   <h2><a href="{{link}}" class="feed-title">{{title}}</a> by <span class="author">{{author}}</span></h2>
   {{#each entries}}
     <div class="entry">
@@ -90,6 +91,7 @@
       <p>{{contentSnippet}}</p>
     </div>
   {{/each}}
+  </div>
 </script>
 
 <script type="text/javascript" charset="utf-8">

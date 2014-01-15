@@ -36,6 +36,7 @@
       var doc;
       doc = createDocument(xhr.responseText);
       if (assetsChanged(doc)) {
+        alert('assets have changed');
         return document.location.href = url;
       } else {
         changePage.apply(null, extractTitleAndBody(doc));

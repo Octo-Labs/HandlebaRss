@@ -55,7 +55,7 @@ rss.init();
   "entries" : [{...},{...},...]
 }
 <% end %>
-<p><%= link_to "Learn how to embed multiple feeds.", "multiple.html" %></p>
+<p><%= link_to "Learn how to embed individual feeds.", "single.html" %></p>
 </div>
 <div class="demo-view">
   <h2>This is the output</h2>
@@ -64,12 +64,14 @@ rss.init();
 
 <!-- the handlebars template for multiple feeds -->
 <script id="multiple-feed-template" type="text/x-handlebars-template">
+  <div class="feed">
   {{#each entries}}
   <div class="entry">
     <h4><a href="{{link}}" class="entry-title">{{title}}</a></h4>
     <p>From <span class="feed-title">{{feed.title}}</span> by <span class="author">{{feed.author}}</span></p>
   </div>
   {{/each}}
+  </div>
 </script>
 
 <script type="text/javascript" charset="utf-8">

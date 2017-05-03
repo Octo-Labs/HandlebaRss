@@ -31,7 +31,7 @@ HandlebaRss.prototype.retrieveUrl = function(url,callback){
   var protocol = document.location.protocol;
   if(protocol == 'file:'){ protocol = 'http:'}
   $.ajax({
-    url: protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(url),
+    url: protocol + '//query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22'+ encodeURIComponent(url)+'%22&format=json&diagnostics=true&callback=?',
     dataType: 'json',
     success: callback
   });
@@ -48,12 +48,13 @@ HandlebaRss.prototype.captureMultiAndRender = function(data){
 };
 
 HandlebaRss.prototype.captureFeed = function(data){
-  this.feed = data.responseData.feed;
+  this.feed = data.query.results;
 };
 
 HandlebaRss.prototype.render = function(){
   var source   = $(this.template).html();
   var template = Handlebars.compile(source);
+  // console.log(this);
   var html    = template(this.feed);
   $(this.destination).html(html);
 };
@@ -64,7 +65,6 @@ HandlebaRss.prototype.renderMulti = function(){
   var template = Handlebars.compile(source);
   var entries = this.coalesseFeeds();
   var context = { entries : entries };
-  
   var html    = template(context);
   $(this.destination).html(html);
 };
@@ -102,4 +102,3 @@ HandlebaRss.prototype.coalesseFeeds = function(){
   });
   return sortedEntries;
 }
-
